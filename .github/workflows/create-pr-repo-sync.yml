@@ -1,4 +1,5 @@
 name: Create PR repo sync
+run-name: Create PR repo sync
 on:
   push:
     branches:
