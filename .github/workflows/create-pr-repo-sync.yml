@@ -1,0 +1,18 @@
+name: Create PR repo sync
+on:
+  push:
+    branches:
+      - dev
+jobs:
+  create_pull_request:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🍏 This job's status is ${{ job.status }}."
+
+      - name: pull-request
+        uses: repo-sync/pull-request@v2
+        with:
+          destination_branch: "int"
+          github_token: ${{secrets.PAT_SECRET}}
+          pr_label: "feature, automated pr"
+          pr_title: "[Example] Simple demo"
