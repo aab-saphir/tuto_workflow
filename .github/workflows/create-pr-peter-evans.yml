@@ -1,9 +1,6 @@
 name: Create PR peter evans
 run-name: Create PR peter evans
-on:
-  push:
-    branches:
-      - dev
+on: [push]
 jobs:
   create_pull_request:
     runs-on: ubuntu-latest

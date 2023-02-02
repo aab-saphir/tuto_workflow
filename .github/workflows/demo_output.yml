@@ -1,3 +1,6 @@
+name: Ouput Demo
+run-name: Ouput Demo
+on: [push]
 jobs:
   job1:
     runs-on: ubuntu-latest
