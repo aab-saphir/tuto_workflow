@@ -2,7 +2,7 @@ name: Ouput Demo
 run-name: Ouput Demo
 on: [push]
 jobs:
-  job1:
+  job_1:
     runs-on: ubuntu-latest
     # Map a step output to a job output
     outputs:
@@ -13,7 +13,7 @@ jobs:
         run: echo "test=hello" >> $GITHUB_OUTPUT
       - id: step2
         run: echo "test=world" >> $GITHUB_OUTPUT
-  job2:
+  job_2:
     runs-on: ubuntu-latest
     needs: job1
     steps:
