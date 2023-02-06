@@ -12,13 +12,7 @@ jobs:
         with:
           repository: aab-saphir/tuto_workflow
           token: ${{ secrets.PAT }}
-          ref: origin/dev
-
-      - name: extract git commit data
-        uses: rlespinasse/git-commit-data-action@v1.x
-
-      - name: Updateauthor information
-        run: echo $({env.GIT_COMMIT_AUTHOR_NAME}) > AUTHOR
+          ref: dev
 
       - name: Create Pull Request
         id: cpr
