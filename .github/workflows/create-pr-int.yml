@@ -2,7 +2,7 @@ name: Create PR int
 on:
   push:
     branches:
-      - int
+      - dev
 jobs:
   create_pr:
     runs-on: ubuntu-latest
