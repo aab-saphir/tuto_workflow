@@ -6,8 +6,6 @@ on:
       - int
 
 jobs:
-  call-workflow:
-    uses: ./.github/workflows/called_workflow.yml
 
   call-workflow-passing-data:
     permissions:
