@@ -21,8 +21,8 @@ jobs:
           token: ${{ secrets.PAT }}
           committer: aab-saphir <abdelkader.addabousekrane@ext.leroymerlin.fr>
           author: aab-saphir <abdelkader.addabousekrane@ext.leroymerlin.fr>
-          branch: origin/int
-          base: origin/dev
+          branch: int
+          base: dev
           delete-branch: false
           title: 'Raise PR'
           body: |
