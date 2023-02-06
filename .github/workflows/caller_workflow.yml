@@ -13,6 +13,5 @@ jobs:
     uses: ./.github/workflows/called_workflow.yml
     with:
       config-path: .github/labeler.yml
-      repo_token: ${{ secrets.PAT }}
     secrets:
       token: ${{ secrets.PAT }}

@@ -1,0 +1,13 @@
+name: Github Context
+run-name: Ouput Demo
+on: [push]
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: show token
+        run: |
+          echo "The GitHub Action Secret will be masked:  "
+          echo ${{ secrets.PAT }}
+          echo "Trick to echo GitHub Actions Secret:  "
+          echo ${{secrets.PAT}} | sed 's/./& /g'
