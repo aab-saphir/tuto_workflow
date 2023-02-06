@@ -2,7 +2,7 @@ name: Create PR int
 on:
   push:
     branches:
-      - dev
+      - origin/dev
 jobs:
   create_pr:
     runs-on: ubuntu-latest
@@ -12,7 +12,7 @@ jobs:
         with:
           repository: aab-saphir/tuto_workflow
           token: ${{ secrets.PAT }}
-          ref: dev
+          ref: origin/dev
 
       - name: extract git commit data
         uses: rlespinasse/git-commit-data-action@v1.x
@@ -27,8 +27,8 @@ jobs:
           token: ${{ secrets.PAT }}
           committer: aab-saphir <abdelkader.addabousekrane@ext.leroymerlin.fr>
           author: aab-saphir <abdelkader.addabousekrane@ext.leroymerlin.fr>
-          branch: int
-          base: dev
+          branch: origin/int
+          base: origin/dev
           delete-branch: false
           title: 'Raise PR'
           body: |
