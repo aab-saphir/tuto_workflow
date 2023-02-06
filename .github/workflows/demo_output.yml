@@ -1,4 +1,4 @@
-name: Ouput Demo
+name: Demo output
 run-name: Ouput Demo
 on: [push]
 jobs:
