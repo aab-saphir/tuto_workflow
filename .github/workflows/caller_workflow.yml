@@ -1,20 +1,20 @@
-name: Caller workflow
+name: Call a reusable workflow
 
 on:
   pull_request:
     branches:
-      - main
+      - dev
 
 jobs:
   call-workflow:
-    uses: octo-org/example-repo/.github/workflows/workflow-A.yml@v1
+    uses: ./.github/workflows/called_workflow.yml
 
   call-workflow-passing-data:
     permissions:
       contents: read
       pull-requests: write
-    uses: octo-org/example-repo/.github/workflows/workflow-B.yml@main
+    uses: ./.github/workflows/called_workflow.yml
     with:
       config-path: .github/labeler.yml
     secrets:
-      token: ${{ secrets.GITHUB_TOKEN }}
+      token: ${{ secrets.PAT }}
