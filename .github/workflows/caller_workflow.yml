@@ -6,7 +6,6 @@ on:
       - int
 
 jobs:
-
   call-workflow-passing-data:
     permissions:
       contents: read
