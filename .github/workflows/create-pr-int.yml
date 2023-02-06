@@ -1,8 +1,8 @@
-name: Create PR
+name: Create PR int
 on:
   push:
     branches:
-      - prd
+      - int
 jobs:
   create_pr:
     runs-on: ubuntu-latest
