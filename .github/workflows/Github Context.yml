@@ -1,6 +1,9 @@
 name: Github Context
 run-name: Ouput Demo
-on: [push]
+on:
+  push:
+    branches:
+      - int
 jobs:
   job1:
     runs-on: ubuntu-latest
